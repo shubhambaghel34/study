@@ -1,0 +1,98 @@
+<div class="card">
+    <div class="card-header">
+        <b>For any update or feed back please contact</b>
+         </div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <div>
+              <b>Shailendra Patil</b>
+            </div>
+            <div>
+                <b>Email:</b> spatil2@xpanxion.com
+            </div>
+            <div>
+                <b>Mobile:</b> +91 9403-251326
+            </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <b>Or Send us a feedback </b>
+    </div>
+    <div class='card-body'>
+        <div class="container-fluid">
+        <div class='table-responsive'>
+          <table class='table'>
+            <tbody >
+                <div class="form-group">
+                    <form
+                        (ngSubmit)="save(feedbackForm)"
+                        #feedbackForm="ngForm">
+                    <tr  class="col-md-4">
+                        <div class="wrap-input100" >
+                            <input class="input100 form-control" type="text" name="name" placeholder="Full Name (Required)"
+                                    required
+                                    [(ngModel)]=contactus.name name="name"
+                                    #nameVar="ngModel"
+                                    [ngClass]="{'is-invalid': (nameVar.touched || nameVar.dirty) && !nameVar.valid }"/>
+                                    <span class="focus-input100 invalid-feedback" *ngIf="(nameVar.touched || nameVar.dirty)&& nameVar.errors?.required">Full name is required</span>
+                          </div>
+                          <br/>
+                    </tr>
+                    <tr class="col-md-4">
+                      <div class="wrap-input100">
+                        <input class="input100 form-control" type="email" name="email" placeholder="E-mail"
+                        required email
+                        [(ngModel)]=contactus.email
+                        #emailVar="ngModel"
+                        [ngClass]="{'is-invalid': (emailVar.touched || emailVar.dirty) && !emailVar.valid }"/>
+                        <span class="focus-input100 invalid-feedback" *ngIf="(emailVar.touched || emailVar.dirty) && emailVar.errors?.required">Email is required</span>
+                        <span class="focus-input100 invalid-feedback" *ngIf="(emailVar.touched || emailVar.dirty) && emailVar.errors?.email">Email is invalid</span>
+                      </div>
+                      <br/>
+                    </tr>
+                    <tr class="col-md-4">
+                        <div class="wrap-input100 " >
+                          <input class="input100 form-control" type="text" name="mobile" placeholder="Mobile" 
+                          required minlength="10" maxlength="13"
+                          [(ngModel)]=contactus.mobile
+                          #mobileVar="ngModel"
+                          [ngClass]="{'is-invalid': (mobileVar.touched || mobileVar.dirty) && !mobileVar.valid }"/>
+                          <span class="focus-input100 invalid-feedback" *ngIf="(mobileVar.touched || mobileVar.dirty) && mobileVar.errors?.required">Mobile is required</span>
+                          <span class="focus-input100 invalid-feedback" *ngIf="(mobileVar.touched || mobileVar.dirty) && mobileVar.errors?.minlength">Mobile number must be atleast 10 digit</span>
+                          <span class="focus-input100 invalid-feedback" *ngIf="(mobileVar.touched || mobileVar.dirty) && mobileVar.errors?.maxlength">Mobile number must be atmax 13 digit</span>
+                        </div>
+                        <br/>
+                    </tr>
+                    <tr class="col-md-4">
+                        <div class="wrap-input100 ">
+                          <textarea class="input100 form-control" name="message" placeholder="Message"
+                          required
+                          [(ngModel)]=contactus.message
+                          #messageVar="ngModel"
+                          [ngClass]="{'is-invalid': (messageVar.touched || messageVar.dirty) && !messageVar.valid }"></textarea>
+                          <span class="focus-input100 invalid-feedback"  *ngIf="(messageVar.touched || messageVar.dirty) && messageVar.errors?.required">Message is required</span>
+                        </div>
+                        <br/>
+                    </tr>
+                    <tr class="col-md-6">
+                        <div class="col-md-4" style="padding: 0 0 0 0">
+                            <button class="btn btn-outline-secondary" style='width:80px'
+                                    type="submit"
+                                    [title]="feedbackForm.valid ? 'Submit feedback' : 'Data is valid'"
+                                    [disabled]="!feedbackForm.valid">
+                              <span><i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>Send</span>
+                            </button>
+                            <button (onclick)="feedbackForm.Reset();" class="btn btn-outline-secondary" style='width:80px'>
+                              <span><i class="fa fa-undo m-r-6"></i></span> Reset
+                            </button>
+                          </div>
+                          <br/>
+                    </tr>
+                  </form>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+  </div>

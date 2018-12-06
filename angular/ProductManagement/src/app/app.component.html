@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<br/>
+<nav class='container navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'></a>
+    <ul class='nav nav-pills'>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']">Product List</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/addproduct']">Add Product</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/aboutus']">About us</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/contactus']">Contact us</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/login']"><span><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</span></a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/signup']"><span><i class="fa fa-user-plus" aria-hidden="true"></i> Signup</span></a></li>
+    </ul>
+</nav>
+<div>
+  
+</div>
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>

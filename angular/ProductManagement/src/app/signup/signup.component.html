@@ -1,0 +1,211 @@
+<div class="card">
+  <div class="card-header">
+      <b>Signup </b>
+  </div>  
+  <div class='card-body'>
+    <form novalidate (ngSubmit)="save()" [formGroup] = "signupFormGroup">
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="firstNameId">First Name</label>
+        <div class="col-md-8" >
+            <input  id="firstNameId" class="form-control" type="text" placeholder="FirstName (Required)" (ngModel)="user.firstName" formControlName="firstName"
+            [ngClass]="{'is-invalid': (signupFormGroup.get('firstName').touched || signupFormGroup.get('firstName').dirty) && !signupFormGroup.get('firstName').valid }"/>
+            <span class="invalid-feedback">
+                <span *ngIf="signupFormGroup.get('firstName').errors?.required">Please enter your first name.</span>
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="lastNameId">Last Name</label>
+        <div class="col-md-8" >
+          <input id="lastNameId" class="form-control" type="text" placeholder="LastName (Required)" (ngModel)="user.lastName" formControlName="lastName"
+                  [ngClass]="{'is-invalid': (signupFormGroup.get('lastName').touched || signupFormGroup.get('lastName').dirty) && !signupFormGroup.get('lastName').valid }"/>
+          <span class="invalid-feedback">
+              <span *ngIf="signupFormGroup.controls.lastName.errors?.required">Please enter your last name.</span>
+          </span>
+        </div>
+      </div>
+
+      <div formGroupName="emailFormGroup">
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label" for="emailId">Email</label>
+          <div class="col-md-8" >
+              <input id="emailId" class="form-control" type="email" placeholder="Email (Required)" (ngModel)="user.email" formControlName="email"
+              [ngClass]="{'is-invalid': emailValidationMessage}">
+              <span class="invalid-feedback">
+                <span>{{emailValidationMessage}}</span>
+              </span>
+              <!-- [ngClass]="{'is-invalid':signupFormGroup.get('emailFormGroup').errors || ((signupFormGroup.get('emailFormGroup.email').touched || signupFormGroup.get('emailFormGroup.email').dirty) && !signupFormGroup.get('emailFormGroup.email').valid)}"/>
+              <span class="invalid-feedback">
+                  <span *ngIf="signupFormGroup.get('emailFormGroup.email').errors?.required">Please enter your Email name.</span>
+                  <span *ngIf="signupFormGroup.get('emailFormGroup.email').errors?.email">Please enter valid email address.</span>
+              </span>            -->
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label" for="confirmEmailId">Confirm Email</label>
+          <div class="col-md-8" >
+              <input id="confirmEmailId" class="form-control" type="email" placeholder="Email (Required)" formControlName="confirmEmail"[ngClass]="{'is-invalid': confirmEmailValidationMessage}">
+              <span class="invalid-feedback">
+                <span>{{confirmEmailValidationMessage}}</span>
+              </span>
+              <!-- [ngClass]="{'is-invalid':signupFormGroup.get('emailFormGroup').errors || ((signupFormGroup.get('emailFormGroup.confirmEmail').touched || signupFormGroup.get('emailFormGroup.confirmEmail').dirty) && !signupFormGroup.get('emailFormGroup.confirmEmail').valid) }"/>
+              <span class="invalid-feedback">
+                  <span *ngIf="signupFormGroup.get('emailFormGroup.confirmEmail').errors?.required">Please enter your Email.</span>
+                  <span *ngIf="signupFormGroup.get('emailFormGroup.confirmEmail').errors?.email">Please enter valid email address.</span>
+                  <span *ngIf="signupFormGroup.get('emailFormGroup').errors?.match">ConfirmEmail much be same as email.</span>
+              </span>            -->
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="mobileId">Mobile</label>
+        <div class="col-md-8" >
+            <input id="mobileId" class="form-control" type="text" placeholder="Mobile" (ngModel)="user.mobile" formControlName="mobile"
+            [ngClass]="{'is-invalid': (signupFormGroup.get('mobile').touched || signupFormGroup.get('mobile').dirty) && !signupFormGroup.get('mobile').valid }"/>
+            <span class="invalid-feedback">
+                <span *ngIf="signupFormGroup.get('mobile').errors?.required">Mobile number is required.</span>
+                <span *ngIf="signupFormGroup.get('mobile').errors?.number">Enter valid mobile number.</span>
+                <span *ngIf="!signupFormGroup.get('mobile').errors?.number && signupFormGroup.get('mobile').errors?.textlength">Mobile number must be between 10-13 digit.</span>
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label pt-0">Send Notifications</label>
+          <div class="col-md-8">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" value="email" (ngModel)="notification" formControlName="notification"> Email
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" value="text" (ngModel)="notification" formControlName="notification">Text
+              </label>
+            </div>
+          </div>
+        </div>
+
+      <div class="form-group row mb-2">
+          <div class="col-md-8">
+            <div class="form-check">
+              <label class="form-check-label" for="blnAddAddressId">
+                <input id="blnAddAddressId" class="form-check-input" type="checkbox" (ngModel)="blnAddAddress"  formControlName="blnAddAddress">Add Address
+              </label>
+            </div>
+          </div>
+      </div>
+
+      <div *ngIf="signupFormGroup.get('blnAddAddress').value">
+      <div>
+        <div formArrayName="addresses" *ngFor="let address of addresses.controls; let iter = index">
+            <div [formGroupName]="iter">
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label pt-0" >Address Type</label>
+                  <div class="col-md-8">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" value="1" formControlName="addressType">Home
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" value="2" formControlName="addressType"> Work
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" value="0" formControlName="addressType"> Other
+                      </label>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label" attr.for="{{'addressLineId'+ iter}}">Address Line</label>
+                  <div class="col-md-8" >
+                    <input id="{{'addressLineId'+ iter}}"  class="form-control" type="text" placeholder="Address Line" formControlName="addressLine"
+                    [ngClass]="{'is-invalid': (address.controls.addressLine.touched || address.controls.addressLine.dirty) && !address.controls.addressLine.valid }">
+                      <span class="invalid-feedback">
+                          <span *ngIf="address.controls.addressLine.errors?.text">Please enter text only.</span>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label" attr.for="{{'streetId'+ iter}}">Street</label>
+                  <div class="col-md-8" >
+                    <input id="{{'streetId'+ iter}}" class="form-control" type="text" placeholder="Street" formControlName="street"
+                    [ngClass]="{'is-invalid': (address.controls.street.touched || address.controls.street.dirty) && !address.controls.street.valid }">
+                      <span class="invalid-feedback">
+                          <span *ngIf="address.controls.street.errors?.text">Please enter text only.</span>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label" attr.for="{{'cityId'+ iter}}">City</label>
+                  <div class="col-md-8" >
+                    <input id="{{'cityId'+ iter}}" class="form-control" type="text" placeholder="City (Required)" formControlName="city"
+                    [ngClass]="{'is-invalid': (address.controls.city.touched || address.controls.city.dirty) && !address.controls.city.valid }">
+                      <span class="invalid-feedback">
+                          <span *ngIf="address.controls.city.errors?.required">Please enter city.</span>
+                          <span *ngIf="address.controls.city.errors?.text">Please enter text only.</span>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label" attr.for="{{'stateId'+ iter}}">State</label>
+                  <div class="col-md-8" >
+                    <input id="{{'stateId'+ iter}}" class="form-control" type="text" placeholder="State (Required)" formControlName="state"
+                    [ngClass]="{'is-invalid': (address.controls.state.touched || address.controls.state.dirty) && !address.controls.state.valid }">
+                      <span class="invalid-feedback">
+                          <span *ngIf="address.controls.state.errors?.required">Please enter state.</span>
+                          <span *ngIf="address.controls.state.errors?.text">Please enter text only.</span>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                  <label class="col-md-2 col-form-label" attr.for="{{'countryId'+ iter}}">Country</label>
+                  <div class="col-md-8" >
+                    <input id="{{'countryId'+ iter}}" class="form-control" type="text" placeholder="Country (Required)" formControlName="country"
+                    [ngClass]="{'is-invalid': (address.controls.country.touched || address.controls.country.dirty) && address.controls.country.valid }">
+                      <span class="invalid-feedback">
+                          <span *ngIf="address.controls.country.errors?.required">Please enter state.</span>
+                          <span *ngIf="address.controls.country.errors?.text">Please enter text only.</span>
+                      </span>
+                  </div>
+              </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <div class="col-md-4">
+                  <button class="btn btn-outline-primary" type="button" [title]="addresses.valid ? 'Add another mailing address' : 'Disabled until the existing address data is valid'"
+                          [disabled]="!addresses.errors" (click)="addAddress()">
+                    Add Another Address
+                  </button>
+                </div>
+              </div>
+        </div>
+      </div>
+      
+      </div>
+      
+      <div class="form-group row mb-2">
+          <div class="offset-md-2 col-md-4">
+            <button class="btn btn-primary mr-3" type="submit" style="widows: 60px;"
+                    [title]="signupFormGroup.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                    [disabled]="!signupFormGroup.valid" >Save</button>
+            <button class="btn btn-primary mr-3" type="button" style="widows: 60px;" (click) = "reset()">Reset</button> 
+            <button class="btn btn-primary mr-3" type="button" style="widows: 60px;" (click) = "populateTestData()">Test</button>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>
