@@ -1,0 +1,19 @@
+
+
+USE Guru_QA
+GO
+select c2.table_name,c2.COLUMN_NAME
+from [INFORMATION_SCHEMA].[COLUMNS] c2
+where table_name='[CostQuote]'
+and c2.COLUMN_NAME not in (select column_name 
+    from [INFORMATION_SCHEMA].[COLUMNS] 
+    where table_name='[CostQuote]')
+
+	USE BazookaArchive
+GO
+select c2.table_name,c2.COLUMN_NAME
+from [INFORMATION_SCHEMA].[COLUMNS] c2
+where table_name='[CostQuote]'
+and c2.COLUMN_NAME not in (select column_name 
+    from [INFORMATION_SCHEMA].[COLUMNS] 
+    where table_name='[CostQuote]')

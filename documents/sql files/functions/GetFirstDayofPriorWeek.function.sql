@@ -1,0 +1,12 @@
+﻿
+CREATE Function GetFirstDayofPriorWeek()
+RETURNS datetime
+
+AS
+
+BEGIN
+
+	RETURN CAST(CONVERT(VARCHAR(10), DATEADD(DAY, (DATEPART(DW, (GETDATE() - 7)) * -1) + 1, GETDATE() - 7), 112) + ' 00:00:00' AS DATETIME)
+
+END
+

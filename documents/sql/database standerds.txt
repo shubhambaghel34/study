@@ -1,0 +1,20 @@
+Data base standerds
+
+- write fk and default constraint in file where table definition  is given
+- never give file name  as TableName.table.sql
+- give proper comments for constraint value
+- never give transaction name more that 32 character
+- don't include lookup word in table name
+- use in catch after rollback tansection EXECUTE dbo.spClawRethrowError;
+- add number of record affected on stagging database.
+- check default value of column and at bo level.
+- use post deployment script to update existing value.
+- nevfer give the transection name
+- notuse rollback before sprethrowerror
+- use dbo. for table
+- never write innerqueries 
+- new data script should be not include in build
+- Add reference data scripts entry into script.PopulateReference\
+- Add go states properly (end of script & end of table)
+- Add constraint queries as part of table creation query
+- 
