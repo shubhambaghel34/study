@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12662334-CD4E-412F-8DED-C749ED9EAD1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coyote.Execution.Posting.Tests</RootNamespace>
+    <AssemblyName>Coyote.Execution.Posting.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>..\packages\Coyote.CodingStandards.11.0.17352.142205\tools\Coyote.Test.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>..\packages\Coyote.CodingStandards.11.0.17352.142205\tools\Coyote.Test.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Common.8.0.17339.139837\lib\net45\Coyote.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Common.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Common.Contracts.8.0.17339.139837\lib\net45\Coyote.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Common.Finance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Common.Finance.3.0.17352.142217\lib\net45\Coyote.Common.Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Systems.Bazooka.Realtime.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Systems.Bazooka.Realtime.Contracts.2.0.18110.170793\lib\net45\Coyote.Systems.Bazooka.Realtime.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Systems.Bazooka.Realtime.Info.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Systems.Bazooka.Realtime.Info.Contracts.2.0.18088.165477\lib\net45\Coyote.Systems.Bazooka.Realtime.Info.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Systems.Email.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.5.9.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.5.9\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.6.4.3\lib\net452\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Log4Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Log4Net.2.0.0\lib\net452\NServiceBus.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Testing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Testing.6.0.3\lib\net452\NServiceBus.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture, Version=3.51.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoFixture.3.51.0\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb6.CustomChecks, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb6.CustomChecks.3.0.0\lib\net452\ServiceControl.Plugin.Nsb6.CustomChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integration\ExternalLoadPostRepositoryTests.cs" />
+    <Compile Include="Integration\LocationCountryRepositoryTests.cs" />
+    <Compile Include="Integration\Managers\ExternalLoadPostRepositoryManager.cs" />
+    <Compile Include="Integration\Managers\TestBucket.cs" />
+    <Compile Include="Integration\RuntimeSettingsTests.cs" />
+    <Compile Include="NServiceBusTestBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Unit\Controllers\PostingControllerTests.cs" />
+    <Compile Include="Unit\Controllers\UnpostingControllerTests.cs" />
+    <Compile Include="Unit\CustomChecks\DATWebApiCheckTests.cs" />
+    <Compile Include="Unit\CustomChecks\InternetTruckStopExternalServiceCheckTests.cs" />
+    <Compile Include="Unit\CustomChecks\PostEverywhereExternalServiceCheckTests.cs" />
+    <Compile Include="Unit\Helper\ObjectHelpers.cs" />
+    <Compile Include="Unit\Helper\TestManager.cs" />
+    <Compile Include="Unit\Managers\LoadPostManagerTests.cs" />
+    <Compile Include="Unit\Managers\LoadUnpostManagerTests.cs" />
+    <Compile Include="Unit\Models\ExternalLoadPostCredentialTests.cs" />
+    <Compile Include="Unit\ServiceLayer\DATWrapperServiceTests.cs" />
+    <Compile Include="Unit\ServiceLayer\RealtimeServiceTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Test.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Common\Coyote.Execution.Posting.Common.csproj">
+      <Project>{b1577f64-c6aa-46d4-9682-9b968e0cfccd}</Project>
+      <Name>Coyote.Execution.Posting.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Contracts\Coyote.Execution.Posting.Contracts.csproj">
+      <Project>{65bf11f3-5415-4d52-bb55-77c8a83acc18}</Project>
+      <Name>Coyote.Execution.Posting.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Domain\Coyote.Execution.Posting.Domain.csproj">
+      <Project>{24471962-7f41-4f9c-b7a7-088486f0cda1}</Project>
+      <Name>Coyote.Execution.Posting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Endpoint\Coyote.Execution.Posting.Endpoint.csproj">
+      <Project>{c85ed35b-d593-45b8-99ab-e708710378d0}</Project>
+      <Name>Coyote.Execution.Posting.Endpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.ServiceLayer\Coyote.Execution.Posting.ServiceLayer.csproj">
+      <Project>{da277d92-b6c2-48c0-90c2-ce1fe8309201}</Project>
+      <Name>Coyote.Execution.Posting.ServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Storage\Coyote.Execution.Posting.Storage.csproj">
+      <Project>{a2f180c8-c1a5-48f5-8137-4d2f410e24b8}</Project>
+      <Name>Coyote.Execution.Posting.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Web.Api\Coyote.Execution.Posting.Web.Api.csproj">
+      <Project>{126c624a-635e-4484-83d3-b91ab9564eef}</Project>
+      <Name>Coyote.Execution.Posting.Web.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

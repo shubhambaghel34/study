@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Domain", "Coyote.Execution.Posting.Domain\Coyote.Execution.Posting.Domain.csproj", "{24471962-7F41-4F9C-B7A7-088486F0CDA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Storage", "Coyote.Execution.Posting.Storage\Coyote.Execution.Posting.Storage.csproj", "{A2F180C8-C1A5-48F5-8137-4D2F410E24B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Common", "Coyote.Execution.Posting.Common\Coyote.Execution.Posting.Common.csproj", "{B1577F64-C6AA-46D4-9682-9B968E0CFCCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.ServiceLayer", "Coyote.Execution.Posting.ServiceLayer\Coyote.Execution.Posting.ServiceLayer.csproj", "{DA277D92-B6C2-48C0-90C2-CE1FE8309201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Endpoint", "Coyote.Execution.Posting.Endpoint\Coyote.Execution.Posting.Endpoint.csproj", "{C85ED35B-D593-45B8-99AB-E708710378D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Contracts", "Coyote.Execution.Posting.Contracts\Coyote.Execution.Posting.Contracts.csproj", "{65BF11F3-5415-4D52-BB55-77C8A83ACC18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Web.Api", "Coyote.Execution.Posting.Web.Api\Coyote.Execution.Posting.Web.Api.csproj", "{126C624A-635E-4484-83D3-B91AB9564EEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.Posting.Tests", "Coyote.Execution.Posting.Tests\Coyote.Execution.Posting.Tests.csproj", "{12662334-CD4E-412F-8DED-C749ED9EAD1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24471962-7F41-4F9C-B7A7-088486F0CDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24471962-7F41-4F9C-B7A7-088486F0CDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24471962-7F41-4F9C-B7A7-088486F0CDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24471962-7F41-4F9C-B7A7-088486F0CDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F180C8-C1A5-48F5-8137-4D2F410E24B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F180C8-C1A5-48F5-8137-4D2F410E24B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F180C8-C1A5-48F5-8137-4D2F410E24B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F180C8-C1A5-48F5-8137-4D2F410E24B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1577F64-C6AA-46D4-9682-9B968E0CFCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1577F64-C6AA-46D4-9682-9B968E0CFCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1577F64-C6AA-46D4-9682-9B968E0CFCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1577F64-C6AA-46D4-9682-9B968E0CFCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA277D92-B6C2-48C0-90C2-CE1FE8309201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA277D92-B6C2-48C0-90C2-CE1FE8309201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA277D92-B6C2-48C0-90C2-CE1FE8309201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA277D92-B6C2-48C0-90C2-CE1FE8309201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85ED35B-D593-45B8-99AB-E708710378D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85ED35B-D593-45B8-99AB-E708710378D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85ED35B-D593-45B8-99AB-E708710378D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85ED35B-D593-45B8-99AB-E708710378D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BF11F3-5415-4D52-BB55-77C8A83ACC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BF11F3-5415-4D52-BB55-77C8A83ACC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BF11F3-5415-4D52-BB55-77C8A83ACC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BF11F3-5415-4D52-BB55-77C8A83ACC18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{126C624A-635E-4484-83D3-B91AB9564EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126C624A-635E-4484-83D3-B91AB9564EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126C624A-635E-4484-83D3-B91AB9564EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126C624A-635E-4484-83D3-B91AB9564EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12662334-CD4E-412F-8DED-C749ED9EAD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12662334-CD4E-412F-8DED-C749ED9EAD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12662334-CD4E-412F-8DED-C749ED9EAD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12662334-CD4E-412F-8DED-C749ED9EAD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D60210F-FBAA-4EA3-8168-CAA7EF49E2A0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://coyote.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Coyote.Execution.Posting.Domain\\Coyote.Execution.Posting.Domain.csproj
+		SccProjectName1 = Coyote.Execution.Posting.Domain
+		SccLocalPath1 = Coyote.Execution.Posting.Domain
+		SccProjectUniqueName2 = Coyote.Execution.Posting.Storage\\Coyote.Execution.Posting.Storage.csproj
+		SccProjectName2 = Coyote.Execution.Posting.Storage
+		SccLocalPath2 = Coyote.Execution.Posting.Storage
+		SccProjectUniqueName3 = Coyote.Execution.Posting.Common\\Coyote.Execution.Posting.Common.csproj
+		SccProjectName3 = Coyote.Execution.Posting.Common
+		SccLocalPath3 = Coyote.Execution.Posting.Common
+		SccProjectUniqueName4 = Coyote.Execution.Posting.ServiceLayer\\Coyote.Execution.Posting.ServiceLayer.csproj
+		SccProjectName4 = Coyote.Execution.Posting.ServiceLayer
+		SccLocalPath4 = Coyote.Execution.Posting.ServiceLayer
+		SccProjectUniqueName5 = Coyote.Execution.Posting.Contracts\\Coyote.Execution.Posting.Contracts.csproj
+		SccProjectName5 = Coyote.Execution.Posting.Contracts
+		SccLocalPath5 = Coyote.Execution.Posting.Contracts
+		SccProjectUniqueName6 = Coyote.Execution.Posting.Endpoint\\Coyote.Execution.Posting.Endpoint.csproj
+		SccProjectName6 = Coyote.Execution.Posting.Endpoint
+		SccLocalPath6 = Coyote.Execution.Posting.Endpoint
+		SccProjectUniqueName7 = Coyote.Execution.Posting.Web.Api\\Coyote.Execution.Posting.Web.Api.csproj
+		SccProjectName7 = Coyote.Execution.Posting.Web.Api
+		SccLocalPath7 = Coyote.Execution.Posting.Web.Api
+		SccProjectUniqueName8 = Coyote.Execution.Posting.Tests\\Coyote.Execution.Posting.Tests.csproj
+		SccProjectName8 = Coyote.Execution.Posting.Tests
+		SccLocalPath8 = Coyote.Execution.Posting.Tests
+	EndGlobalSection
+EndGlobal

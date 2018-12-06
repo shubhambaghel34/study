@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEF73591-408A-4B91-AB80-90E6472DE1B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coyote.Execution.CheckCall.Tests</RootNamespace>
+    <AssemblyName>Coyote.Execution.CheckCall.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Coyote.CodingStandards\Coyote.Test.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Coyote.CodingStandards\Coyote.Test.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>    
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>    
+    </Reference>
+    <Reference Include="Coyote.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Common.3.0.17006.94492\lib\net45\Coyote.Common.dll</HintPath>     
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>    
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.5.9\lib\net45\Moq.dll</HintPath>     
+    </Reference>
+    <Reference Include="NServiceBus.AcceptanceTesting">
+      <HintPath>..\packages\NServiceBus.AcceptanceTesting.5.2.12\lib\net45\NServiceBus.AcceptanceTesting.dll</HintPath>      
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.5.2.12\lib\net45\NServiceBus.Core.dll</HintPath>    
+    </Reference>
+    <Reference Include="NServiceBus.Log4Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NServiceBus.Log4Net.1.0.0\lib\net45\NServiceBus.Log4Net.dll</HintPath>     
+    </Reference>
+    <Reference Include="NServiceBus.ObjectBuilder.Autofac, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NServiceBus.Autofac.5.0.0\lib\net45\NServiceBus.ObjectBuilder.Autofac.dll</HintPath>    
+    </Reference>
+    <Reference Include="NServiceBus.Testing">
+      <HintPath>..\packages\NServiceBus.Testing.5.2.0\lib\net45\NServiceBus.Testing.dll</HintPath>     
+    </Reference>
+    <Reference Include="NServiceBus.Transports.RabbitMQ, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NServiceBus.RabbitMQ.3.1.0\lib\net45\NServiceBus.Transports.RabbitMQ.dll</HintPath> 
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.6.1.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RabbitMQ.Client.3.6.1\lib\net45\RabbitMQ.Client.dll</HintPath>     
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Integration\DailyCheckCallTestContext.cs" />
+    <Compile Include="Integration\DailyCheckCallTests.cs" />
+    <Compile Include="Integration\EndpointBuilders\CheckCallEmailServer.cs" />
+    <Compile Include="Integration\EndpointBuilders\CheckCallServer.cs" />
+    <Compile Include="Integration\EndpointBuilders\DailyCheckCall_IntegrationTest_Endpoint.cs" />
+    <Compile Include="Integration\EndpointBuilders\DailyCheckCall_IntegrationTest_Email_Endpoint.cs" />
+    <Compile Include="Integration\Support\CarrierManagement.cs" />
+    <Compile Include="Integration\Support\CustomerManagement.cs" />
+    <Compile Include="Integration\Support\LoadManagement.cs" />
+    <Compile Include="Integration\Support\RandomDataGeneration.cs" />
+    <Compile Include="Integration\Support\TestBucket.cs" />
+    <Compile Include="Integration\Support\UserManagement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\Email\DailyCheckCallTests.cs" />
+    <Compile Include="Unit\Email\Handlers\LoadActivationCancellationEmailCommandHandlerTests.cs" />
+    <Compile Include="Unit\Email\Handlers\SendDailyCheckCallEmailHandlerTests.cs" />
+    <Compile Include="Unit\NServiceBusHandlerUnitTestBase.cs" />
+    <Compile Include="Unit\Handlers\ProcessDailyCheckCallHandlerTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Contracts\Coyote.Execution.CheckCall.Contracts.csproj">
+      <Project>{517aad03-836a-4e0a-aaa7-6a383fcd90ea}</Project>
+      <Name>Coyote.Execution.CheckCall.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Domain\Coyote.Execution.CheckCall.Domain.csproj">
+      <Project>{5d3e176d-5687-4f2e-910d-c3a2544d929e}</Project>
+      <Name>Coyote.Execution.CheckCall.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Email.Endpoint\Coyote.Execution.CheckCall.Email.Endpoint.csproj">
+      <Project>{681f76bf-0231-438f-bc15-1e5d519bc9ec}</Project>
+      <Name>Coyote.Execution.CheckCall.Email.Endpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Endpoint\Coyote.Execution.CheckCall.Endpoint.csproj">
+      <Project>{6a6e1b92-ee69-4737-bcfe-4719d618489d}</Project>
+      <Name>Coyote.Execution.CheckCall.Endpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Services\Coyote.Execution.CheckCall.Services.csproj">
+      <Project>{fe33aca5-3068-4988-a874-a20589454cd4}</Project>
+      <Name>Coyote.Execution.CheckCall.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Storage\Coyote.Execution.CheckCall.Storage.csproj">
+      <Project>{cf4bd7a8-a3b2-4574-b218-ff17ced04626}</Project>
+      <Name>Coyote.Execution.CheckCall.Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

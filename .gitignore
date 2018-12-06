@@ -1,0 +1,92 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Database/ProductManagement/ProductManagement/bin/Debug
+/.vs
+/Database/ProductManagement/ProductManagement/obj/Debug
+/angular/angular-tour-of-heroes-master/node_modules/.bin
+/angular/AngularDemo/.vs
+/angular/AngularDemo/AngularDemo/bin
+/angular/AngularDemo/AngularDemo/obj
+/angular/AngularDemo/packages
+/.net core/DemoApplication/.vs/DemoApplication/v15/Server/sqlite3
+/.net core/DemoApplication/DemoApplication/obj
+/.net core/DemoApplication/Demo.Web.Api/obj
+/.net core/DemoApplication/Demo.Web.Api/bin
+/.net core/DemoApplication/Demo.Storage.Dapper/obj
+/.net core/DemoApplication/Demo.Storage.Dapper/bin
+/.net core/DemoApplication/Demo.Storage/obj
+/.net core/DemoApplication/Demo.Storage/bin/Debug/netcoreapp2.1
+/.net core/DemoApplication/Demo.Services/obj
+/.net core/DemoApplication/Demo.Services/bin
+/.net core/DemoApplication/Demo.Contract/obj
+/.net core/DemoApplication/Demo.Contract/bin
+/.net core/DemoApplication/Demo.Common/obj
+/.net core/DemoApplication/Demo.Common/bin
+/.net core/~$et core.docx
+/backup/Checkcall/.vs/Coyote.Execution.CheckCall/v14
+/backup/Checkcall/.vs/Coyote.Execution.CheckCall/v15
+/backup/Checkcall/Coyote.Execution.CheckCall.Contracts/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.Storage/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.ServiceLayer/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.Endpoint/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.Domain/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.Contracts/obj
+/backup/Coyote.Execution.Posting/Coyote.Execution.Posting.Common/obj
+/backup/Coyote.Execution.Posting/.vs
+/backup/Checkcall/Coyote.Execution.CheckCall.Tests/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Tests/Coyote.Execution.CheckCall.Tests.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Tests/Coyote.Carrier.Ops.CheckCall.Tests.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Tests/bin/Debug
+/backup/Checkcall/Coyote.Execution.CheckCall.Storage/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Storage/Coyote.Execution.CheckCall.Storage.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Storage/Coyote.Carrier.Ops.CheckCall.Storage.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Services/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Services/Coyote.Execution.CheckCall.Services.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Services/Coyote.Carrier.Ops.CheckCall.Services.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.JobScheduler/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.JobScheduler/Coyote.Execution.CheckCall.JobScheduler.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.JobScheduler/Coyote.Carrier.Ops.CheckCall.JobScheduler.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Endpoint/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Endpoint/Coyote.Execution.CheckCall.Endpoint.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Endpoint/Coyote.Carrier.Ops.CheckCall.Endpoint.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Email.Endpoint/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Email.Endpoint/Coyote.Execution.CheckCall.Email.Endpoint.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Email.Endpoint/Coyote.Carrier.Ops.CheckCall.Email.Endpoint.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Domain/obj
+/backup/Checkcall/Coyote.Execution.CheckCall.Domain/Coyote.Execution.CheckCall.Domain.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Domain/Coyote.Carrier.Ops.CheckCall.Domain.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Contracts/Coyote.Execution.CheckCall.Contracts.csproj.vspscc
+/backup/Checkcall/Coyote.Execution.CheckCall.Contracts/Coyote.Carrier.Ops.CheckCall.Contracts.csproj.vspscc
+/backup/DemoApplication/.vs
+/backup/Testing/.vs/Testing/v14
+/backup/Testing/.vs/Testing/v15
+/backup/wcf call back/.vs/WcfCallbacks/v15
+/backup/SendingSMS/SendingSMS/obj
+/backup/SendingSMS/SendingSMS/bin/Debug
+/backup/SendingSMS/consumewcfservice/obj
+/backup/SendingSMS/consumewcfservice/bin/Debug
+/backup/SendingSMS/.vs
+/backup/native-integration_rabbit_4/Receiver/obj/Debug
+/backup/native-integration_rabbit_4/Receiver/bin/Debug
+/backup/native-integration_rabbit_4/packages
+/backup/native-integration_rabbit_4/NativeSender/obj/Debug
+/backup/native-integration_rabbit_4/NativeSender/bin/Debug
+/backup/native-integration_rabbit_4/.vs/NativeRabbitMQ/v14
+/backup/MyCalculatorServiceHost/obj
+/backup/MyCalculatorServiceHost/bin/Debug
+/backup/MyCalculatorService/obj
+/backup/MyCalculatorService/bin/Debug
+/backup/MyCalculatorService/.vs/MyCalculatorService/v14
+/backup/DemoApplication/packages
+/backup/DemoApplication/DemoApplication/obj
+/backup/DemoApplication/DemoApplication/bin/Debug
+/backup/DemoApplication/Demo.Web.Api.Client/obj
+/backup/DemoApplication/Demo.Web.Api.Client/bin/Debug
+/backup/DemoApplication/Demo.Web.Api/obj
+/backup/DemoApplication/Demo.Web.Api/bin
+/backup/DemoApplication/Demo.Storage/obj
+/backup/DemoApplication/Demo.Domain/obj/Debug
+/backup/DemoApplication/Demo.Contracts/obj
+/backup/DemoApplication/Demo.Contracts/bin/Debug

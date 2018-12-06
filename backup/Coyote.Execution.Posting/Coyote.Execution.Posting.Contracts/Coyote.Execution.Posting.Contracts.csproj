@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65BF11F3-5415-4D52-BB55-77C8A83ACC18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coyote.Execution.Posting.Contracts</RootNamespace>
+    <AssemblyName>Coyote.Execution.Posting.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>..\packages\Coyote.CodingStandards.11.0.17352.142205\tools\Coyote.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>..\packages\Coyote.CodingStandards.11.0.17352.142205\tools\Coyote.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Coyote.Systems.Bazooka.Realtime.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Systems.Bazooka.Realtime.Contracts.2.0.18110.170793\lib\net45\Coyote.Systems.Bazooka.Realtime.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\PostLoadCommand.cs" />
+    <Compile Include="Commands\UnpostLoadCommand.cs" />
+    <Compile Include="Commands\LoadPostBase.cs" />
+    <Compile Include="IRuntimeSettings.cs" />
+    <Compile Include="Managers\ILoadPostManager.cs" />
+    <Compile Include="Managers\ILoadUnpostManager.cs" />
+    <Compile Include="Models\AddressNode.cs" />
+    <Compile Include="Models\AutoRefreshLoadPostInfo.cs" />
+    <Compile Include="Models\LoadPost.cs" />
+    <Compile Include="Models\LoadPostInfo.cs" />
+    <Compile Include="ServiceLayer\IDATWrapperService.cs" />
+    <Compile Include="ServiceLayer\IExternalService.cs" />
+    <Compile Include="ServiceLayer\IExternalServiceBase.cs" />
+    <Compile Include="ServiceLayer\IInternetTruckStopExternalService.cs" />
+    <Compile Include="ServiceLayer\IPostEverywhereExternalService.cs" />
+    <Compile Include="ServiceLayer\IPostExternalService.cs" />
+    <Compile Include="ServiceLayer\IRealtimeService.cs" />
+    <Compile Include="ServiceLayer\IUpdateMaxPayService.cs" />
+    <Compile Include="Storage\IExternalLoadPostRepository.cs" />
+    <Compile Include="Storage\ILocationCountryRepository.cs" />
+    <Compile Include="Storage\IPostingRepository.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\ExternalLoadPost.cs" />
+    <Compile Include="Models\ExternalLoadPostCredential.cs" />
+    <Compile Include="Models\LocationCountry.cs" />
+    <Compile Include="Models\PostEverywhere\ErrorDoModel.cs" />
+    <Compile Include="Models\PostEverywhere\PostEverywhereModel.cs" />
+    <Compile Include="Models\PostEverywhere\PostEverywhereResponseModel.cs" />
+    <Compile Include="Models\PostEverywhere\PostingErrorsModel.cs" />
+    <Compile Include="Models\PostEverywhere\PostLoadModel.cs" />
+    <Compile Include="Models\PostEverywhere\ResponseDoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coyote.Execution.Posting.Common\Coyote.Execution.Posting.Common.csproj">
+      <Project>{b1577f64-c6aa-46d4-9682-9b968e0cfccd}</Project>
+      <Name>Coyote.Execution.Posting.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

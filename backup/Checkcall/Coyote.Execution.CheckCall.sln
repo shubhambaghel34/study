@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Endpoint", "Coyote.Execution.CheckCall.Endpoint\Coyote.Execution.CheckCall.Endpoint.csproj", "{6A6E1B92-EE69-4737-BCFE-4719D618489D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Contracts", "Coyote.Execution.CheckCall.Contracts\Coyote.Execution.CheckCall.Contracts.csproj", "{517AAD03-836A-4E0A-AAA7-6A383FCD90EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{4B997FEC-4651-4B6E-AC68-EAB6703EA28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Tests", "Coyote.Execution.CheckCall.Tests\Coyote.Execution.CheckCall.Tests.csproj", "{CEF73591-408A-4B91-AB80-90E6472DE1B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Email.Endpoint", "Coyote.Execution.CheckCall.Email.Endpoint\Coyote.Execution.CheckCall.Email.Endpoint.csproj", "{681F76BF-0231-438F-BC15-1E5D519BC9EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Storage", "Coyote.Execution.CheckCall.Storage\Coyote.Execution.CheckCall.Storage.csproj", "{CF4BD7A8-A3B2-4574-B218-FF17CED04626}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{610CC730-E1AF-461F-B224-71A7F80D8B7B}"
+	ProjectSection(SolutionItems) = preProject
+		CustomDictionary.xml = CustomDictionary.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Domain", "Coyote.Execution.CheckCall.Domain\Coyote.Execution.CheckCall.Domain.csproj", "{5D3E176D-5687-4F2E-910D-C3A2544D929E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.JobScheduler", "Coyote.Execution.CheckCall.JobScheduler\Coyote.Execution.CheckCall.JobScheduler.csproj", "{0BF2C630-75AB-46A5-8D03-EF8A0959C199}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coyote.Execution.CheckCall.Services", "Coyote.Execution.CheckCall.Services\Coyote.Execution.CheckCall.Services.csproj", "{FE33ACA5-3068-4988-A874-A20589454CD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A6E1B92-EE69-4737-BCFE-4719D618489D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6E1B92-EE69-4737-BCFE-4719D618489D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6E1B92-EE69-4737-BCFE-4719D618489D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6E1B92-EE69-4737-BCFE-4719D618489D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{517AAD03-836A-4E0A-AAA7-6A383FCD90EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517AAD03-836A-4E0A-AAA7-6A383FCD90EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517AAD03-836A-4E0A-AAA7-6A383FCD90EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517AAD03-836A-4E0A-AAA7-6A383FCD90EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF73591-408A-4B91-AB80-90E6472DE1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF73591-408A-4B91-AB80-90E6472DE1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF73591-408A-4B91-AB80-90E6472DE1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF73591-408A-4B91-AB80-90E6472DE1B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{681F76BF-0231-438F-BC15-1E5D519BC9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681F76BF-0231-438F-BC15-1E5D519BC9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681F76BF-0231-438F-BC15-1E5D519BC9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681F76BF-0231-438F-BC15-1E5D519BC9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4BD7A8-A3B2-4574-B218-FF17CED04626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4BD7A8-A3B2-4574-B218-FF17CED04626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4BD7A8-A3B2-4574-B218-FF17CED04626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4BD7A8-A3B2-4574-B218-FF17CED04626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3E176D-5687-4F2E-910D-C3A2544D929E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3E176D-5687-4F2E-910D-C3A2544D929E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3E176D-5687-4F2E-910D-C3A2544D929E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3E176D-5687-4F2E-910D-C3A2544D929E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF2C630-75AB-46A5-8D03-EF8A0959C199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF2C630-75AB-46A5-8D03-EF8A0959C199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF2C630-75AB-46A5-8D03-EF8A0959C199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF2C630-75AB-46A5-8D03-EF8A0959C199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE33ACA5-3068-4988-A874-A20589454CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE33ACA5-3068-4988-A874-A20589454CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE33ACA5-3068-4988-A874-A20589454CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE33ACA5-3068-4988-A874-A20589454CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEF73591-408A-4B91-AB80-90E6472DE1B2} = {4B997FEC-4651-4B6E-AC68-EAB6703EA28E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5FA1D7C-3F35-4C9C-8803-108A00935D1C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://coyote.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Coyote.Execution.CheckCall.Tests\\Coyote.Execution.CheckCall.Tests.csproj
+		SccProjectTopLevelParentUniqueName1 = Coyote.Execution.CheckCall.sln
+		SccProjectName1 = Coyote.Execution.CheckCall.Tests
+		SccLocalPath1 = Coyote.Execution.CheckCall.Tests
+		SccProjectUniqueName2 = Coyote.Execution.CheckCall.Contracts\\Coyote.Execution.CheckCall.Contracts.csproj
+		SccProjectName2 = Coyote.Execution.CheckCall.Contracts
+		SccLocalPath2 = Coyote.Execution.CheckCall.Contracts
+		SccProjectUniqueName3 = Coyote.Execution.CheckCall.Domain\\Coyote.Execution.CheckCall.Domain.csproj
+		SccProjectName3 = Coyote.Execution.CheckCall.Domain
+		SccLocalPath3 = Coyote.Execution.CheckCall.Domain
+		SccProjectUniqueName4 = Coyote.Execution.CheckCall.Email.Endpoint\\Coyote.Execution.CheckCall.Email.Endpoint.csproj
+		SccProjectName4 = Coyote.Execution.CheckCall.Email.Endpoint
+		SccLocalPath4 = Coyote.Execution.CheckCall.Email.Endpoint
+		SccProjectUniqueName5 = Coyote.Execution.CheckCall.Endpoint\\Coyote.Execution.CheckCall.Endpoint.csproj
+		SccProjectName5 = Coyote.Execution.CheckCall.Endpoint
+		SccLocalPath5 = Coyote.Execution.CheckCall.Endpoint
+		SccProjectUniqueName6 = Coyote.Execution.CheckCall.JobScheduler\\Coyote.Execution.CheckCall.JobScheduler.csproj
+		SccProjectName6 = Coyote.Execution.CheckCall.JobScheduler
+		SccLocalPath6 = Coyote.Execution.CheckCall.JobScheduler
+		SccProjectUniqueName7 = Coyote.Execution.CheckCall.Services\\Coyote.Execution.CheckCall.Services.csproj
+		SccProjectName7 = Coyote.Execution.CheckCall.Services
+		SccLocalPath7 = Coyote.Execution.CheckCall.Services
+		SccProjectUniqueName8 = Coyote.Execution.CheckCall.Storage\\Coyote.Execution.CheckCall.Storage.csproj
+		SccProjectName8 = Coyote.Execution.CheckCall.Storage
+		SccLocalPath8 = Coyote.Execution.CheckCall.Storage
+	EndGlobalSection
+EndGlobal

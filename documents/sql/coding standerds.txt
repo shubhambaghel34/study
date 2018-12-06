@@ -1,0 +1,12 @@
+-check TAB index of column
+-check if else conditions properly
+-add comments
+- use nameof
+- use $ for string formatation
+- use linq when possible
+- never use auto ganerated bo
+- remove un use methods, varibles
+- use with
+- security setting not applied on label n panel
+- remove tabindex and securitymoduletask from label
+- 
