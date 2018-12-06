@@ -1,0 +1,32 @@
+﻿// /////////////////////////////////////////////////////////////////////////////////////
+//                           Copyright (c) 2016 - 2017
+//                            Coyote Logistics L.L.C.
+//                          All Rights Reserved Worldwide
+// 
+// WARNING:  This program (or document) is unpublished, proprietary
+// property of Coyote Logistics L.L.C. and is to be maintained in strict confidence.
+// Unauthorized reproduction, distribution or disclosure of this program
+// (or document), or any program (or document) derived from it is
+// prohibited by State and Federal law, and by local law outside of the U.S.
+// /////////////////////////////////////////////////////////////////////////////////////
+
+
+namespace Coyote.Execution.CheckCall.Tests.Integration
+{
+    using System.Collections.Generic;
+    using NServiceBus.AcceptanceTesting;
+   
+    public class DailyCheckCallTestContext : ScenarioContext
+    {
+
+        public DailyCheckCallTestContext()
+        {
+            MessagesSent = new Dictionary<int, IEnumerable<int>>();
+        }
+
+        public Dictionary<int, IEnumerable<int>> MessagesSent { get; set; }
+
+        public bool CheckCallEndpointSetup { get; set; }
+        public bool CheckCallEmailEndpointSetup { get; set; }
+    }
+}

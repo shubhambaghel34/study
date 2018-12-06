@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A6E1B92-EE69-4737-BCFE-4719D618489D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coyote.Execution.CheckCall.Endpoint</RootNamespace>
+    <AssemblyName>Coyote.Execution.CheckCall.Endpoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Coyote.CodingStandards\Coyote.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Coyote.CodingStandards\Coyote.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.DynamicProxy2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Extras.DynamicProxy2.3.0.7\lib\net40\Autofac.Extras.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>  
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>      
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1213">
+      <HintPath>..\packages\Common.Logging.Log4Net1213.3.3.1\lib\net40\Common.Logging.Log4Net1213.dll</HintPath> 
+    </Reference>
+    <Reference Include="Coyote.Business.Events.Publisher.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Business.Events.Publisher.Contracts.4.3.17290.131710\lib\net45\Coyote.Business.Events.Publisher.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Coyote.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coyote.Common.3.0.17006.94492\lib\net45\Coyote.Common.dll</HintPath>     
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>   
+    </Reference>
+    <Reference Include="log4net.AutoFac, Version=1.0.2.0, Culture=neutral, PublicKeyToken=81d56f8dbd853221, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.AutoFac.1.0.3\lib\net45\log4net.AutoFac.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.5.2.12\lib\net45\NServiceBus.Core.dll</HintPath>    
+    </Reference>
+    <Reference Include="NServiceBus.Host, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Host.6.0.0\lib\net45\NServiceBus.Host.exe</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Log4Net">
+      <HintPath>..\packages\NServiceBus.Log4Net.1.0.0\lib\net45\NServiceBus.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.ObjectBuilder.Autofac, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.Autofac.5.0.0\lib\net45\NServiceBus.ObjectBuilder.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Transports.RabbitMQ">
+      <HintPath>..\packages\NServiceBus.RabbitMQ.3.1.0\lib\net45\NServiceBus.Transports.RabbitMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.6.1\lib\net45\RabbitMQ.Client.dll</HintPath>    
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb5.CustomChecks">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb5.CustomChecks.1.0.1\lib\net45\ServiceControl.Plugin.Nsb5.CustomChecks.dll</HintPath>      
+    </Reference>
+    <Reference Include="ServiceControl.Plugin.Nsb5.Heartbeat">
+      <HintPath>..\packages\ServiceControl.Plugin.Nsb5.Heartbeat.2.0.1\lib\net45\ServiceControl.Plugin.Nsb5.Heartbeat.dll</HintPath>      
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomChecks\MonitorDBConnection.cs" />
+    <Compile Include="EndpointConfig.cs" />
+    <Compile Include="Handlers\LoadStateChangedEventHandler.cs" />
+    <Compile Include="Handlers\ProcessDailyCheckCallHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NServiceBus.Host.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Contracts\Coyote.Execution.CheckCall.Contracts.csproj">
+      <Project>{517aad03-836a-4e0a-aaa7-6a383fcd90ea}</Project>
+      <Name>Coyote.Execution.CheckCall.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Domain\Coyote.Execution.CheckCall.Domain.csproj">
+      <Project>{5d3e176d-5687-4f2e-910d-c3a2544d929e}</Project>
+      <Name>Coyote.Execution.CheckCall.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coyote.Execution.CheckCall.Storage\Coyote.Execution.CheckCall.Storage.csproj">
+      <Project>{cf4bd7a8-a3b2-4574-b218-ff17ced04626}</Project>
+      <Name>Coyote.Execution.CheckCall.Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
+</Project>
